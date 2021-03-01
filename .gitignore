@@ -1,4 +1,3 @@
-*.DS_Store
 *.sw[po]
 *.py[co]
 *.out
@@ -13,4 +12,3 @@
 *.toc
 *.bbl
 *.blg
-*.bib

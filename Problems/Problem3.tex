@@ -1,0 +1,19 @@
+\begin{homeworkProblem}
+    Write part of \alg{Quick-Sort($list, start, end$)}
+
+    \begin{algorithm}
+        \begin{algorithmic}[1]
+            \Function{Quick-Sort}{$list, start, end$}
+                \If{$start \geq end$}
+                    \State{} \Return{}
+                \EndIf{}
+                \State{} $mid \gets \Call{Partition}{list, start, end}$
+                \State{} \Call{Quick-Sort}{$list, start, mid - 1$}
+                \State{} \Call{Quick-Sort}{$list, mid + 1, end$}
+            \EndFunction{}
+        \end{algorithmic}
+        \caption{Start of QuickSort}
+    \end{algorithm}
+\end{homeworkProblem}
+
+\pagebreak
