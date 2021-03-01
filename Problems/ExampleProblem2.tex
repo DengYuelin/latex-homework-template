@@ -1,8 +1,8 @@
-\begin{homeworkProblem}
+\section{Problem 2}
     Let \(\Sigma = \{0, 1\}\). Construct a DFA \(A\) that recognizes the
     language that consists of all binary numbers that can be divided by 5.
-    \\
-
+    
+    \vspace{2mm}
     Let the state \(q_k\) indicate the remainder of \(k\) divided by 5. For
     example, the remainder of 2 would correlate to state \(q_2\) because \(7
     \mod 5 = 2\).
@@ -36,15 +36,13 @@
         \label{fig:multiple5}
     \end{figure}
 
-    \textbf{Justification}
-    \\
+    \subsection{Justification}
 
     Take a given binary number, \(x\). Since there are only two inputs to our
     state machine, \(x\) can either become \(x0\) or \(x1\). When a 0 comes
     into the state machine, it is the same as taking the binary number and
     multiplying it by two. When a 1 comes into the machine, it is the same as
-    multipying by two and adding one.
-    \\
+    multiplying by two and adding one.
 
     Using this knowledge, we can construct a transition table that tell us
     where to go:
@@ -67,6 +65,5 @@
     Therefore on state \(q_0\) or (\(x \mod 5 = 0\)), a transition line should
     go to state \(q_0\) for the input 0 and a line should go to state \(q_1\)
     for input 1. Continuing this gives us the Figure~\ref{fig:multiple5}.
-\end{homeworkProblem}
 
 \pagebreak

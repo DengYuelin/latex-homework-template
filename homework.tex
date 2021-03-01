@@ -37,7 +37,7 @@
 \linespread{1.1}
 
 \pagestyle{fancy}
-\lhead{\hmwkAuthorName}
+% \lhead{\hmwkAuthorName}
 \rhead{\firstxmark}
 \lfoot{\lastxmark}
 \cfoot{\thepage}
@@ -47,55 +47,7 @@
 
 \setlength\parindent{0pt}
 
-%
-% Create Problem Sections
-%
-
-\newcommand{\enterProblemHeader}[1]{
-    \nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
-    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
-}
-
-\newcommand{\exitProblemHeader}[1]{
-    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
-    \stepcounter{#1}
-    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
-}
-
 \setcounter{secnumdepth}{0}
-\newcounter{partCounter}
-\newcounter{homeworkProblemCounter}
-\setcounter{homeworkProblemCounter}{1}
-\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
-
-%
-% Homework Problem Environment
-%
-% This environment takes an optional argument. When given, it will adjust the
-% problem counter. This is useful for when the problems given for your
-% assignment aren't sequential. See the last 3 problems of this template for an
-% example.
-%
-\newenvironment{homeworkProblem}[1][-1]{
-    \ifnum#1>0
-        \setcounter{homeworkProblemCounter}{#1}
-    \fi
-    \section{Problem \arabic{homeworkProblemCounter}}
-    \setcounter{partCounter}{1}
-    \enterProblemHeader{homeworkProblemCounter}
-}{
-    \exitProblemHeader{homeworkProblemCounter}
-}
-
-%
-% Homework Details
-%   - Title
-%   - Due date
-%   - Class
-%   - Section/Time
-%   - Instructor
-%   - Author
-%
 
 \newcommand{\hmwkTitle}{Homework\ \#1}
 \newcommand{\hmwkClass}{Course Name}
@@ -147,11 +99,10 @@
 
 \pagebreak
 
-\input{Problems/Problem1}
-\input{Problems/Problem2}
-\input{Problems/Problem3}
-\input{Problems/Problem4}
-
+\input{Problems/ExampleProblem1}
+\input{Problems/ExampleProblem2}
+\input{Problems/ExampleProblem3}
+\input{Problems/ExampleProblem4}
 
 \input{misc/reference.tex}
 \end{document}

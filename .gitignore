@@ -12,3 +12,5 @@
 *.toc
 *.bbl
 *.blg
+*.bcf
+*.xml
