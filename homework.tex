@@ -1,5 +1,6 @@
 \documentclass{article}
-
+\usepackage{listings}
+\usepackage{color}
 \usepackage{fancyhdr}
 \usepackage{extramarks}
 \usepackage{amsmath}
@@ -24,6 +25,9 @@
 \addbibresource{misc/ref.bib}
 \usetikzlibrary{automata,positioning}
 
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 %
 % Basic Document Settings
 %
@@ -50,8 +54,8 @@
 
 \setcounter{secnumdepth}{0}
 
-\newcommand{\hmwkTitle}{Homework\ \#1}
-\newcommand{\hmwkClass}{Course Name}
+\newcommand{\hmwkTitle}{Homework\ \#4}
+\newcommand{\hmwkClass}{24352}
 \newcommand{\hmwkAuthorName}{\textbf{Daniel Deng}}
 
 %
@@ -96,14 +100,34 @@
 
 \begin{document}
 
+%% matlab code
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    backgroundcolor = \color{backcolour},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
+
 \maketitle
 
 \pagebreak
 
-\input{Problems/ExampleProblem1}
+\input{Problems/Problem1}
 \input{Problems/ExampleProblem2}
 \input{Problems/ExampleProblem3}
 \input{Problems/ExampleProblem4}
 \includepdf{misc/matlab_p1.pdf}
-\input{misc/reference.tex}
+% \input{misc/reference.tex}
 \end{document}
