@@ -1,6 +1,6 @@
 clc,clear
 t = 0:0.01:10;
-%% a
+%% b
 NUM = [8 10];
 DEN = [1 1 5 13];
 sys_b_tf = tf(NUM, DEN);
@@ -17,7 +17,7 @@ sys_b_tf2ss = ss(A_,B_,C_,D_);
 [y1,t] = step(sys_b_tf,t);
 [y2,t] = step(sys_b_ss,t);
 [y3,t] = step(sys_b_tf2ss,t);
-plot(t,y1,'r',t,y2,'b:',t,y2,'g--','linewidth',2)
+plot(t,y1,'r',t,y2,'b:',t,y3,'g--','linewidth',2)
 grid minor
 title('Response to step')
 xlabel('Time (s)')
