@@ -1,5 +1,8 @@
 \documentclass{article}
 \usepackage{listings}
+\usepackage[T1]{fontenc}
+\usepackage{beramono}
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{color}
 \usepackage{fancyhdr}
 \usepackage{extramarks}
@@ -11,7 +14,7 @@
 \usepackage[plain]{algorithm}
 \usepackage{algpseudocode}
 \usepackage{pdfpages}
-\usepackage{setspace}
+\usepackage{soul}
 \usepackage[
     backend=biber,
     doi=false,
@@ -39,21 +42,21 @@
 \linespread{1.1}
 
 \pagestyle{fancy}
-\lhead{\hmwkAuthorName}
+\lhead{\noteAuthorName}
 \rhead{\leftmark}
 \lfoot{\lastxmark}
 \cfoot{\thepage}
 
 \renewcommand\headrulewidth{0.4pt}
 \renewcommand\footrulewidth{0.4pt}
+\renewcommand{\baselinestretch}{1.5}
 
 \setlength\parindent{0pt}
 
 \setcounter{secnumdepth}{0}
 
-\newcommand{\hmwkTitle}{Homework\ \#4}
-\newcommand{\hmwkClass}{24352}
-\newcommand{\hmwkAuthorName}{\textbf{Daniel Deng}}
+\newcommand{\noteTitle}{Homework \#4}
+\newcommand{\noteAuthorName}{\textbf{Daniel Deng}}
 
 %
 % Title Page
@@ -61,11 +64,11 @@
 
 \title{
     \vspace{2in}
-    \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+    \textmd{\textbf{\noteTitle}}\\
     \vspace{3in}
 }
 
-\author{\hmwkAuthorName}
+\author{\noteAuthorName}
 \date\today
 
 \renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\}
@@ -95,9 +98,40 @@
 \newcommand{\Cov}{\mathrm{Cov}}
 \newcommand{\Bias}{\mathrm{Bias}}
 
-\begin{document}
+% % Julia language
+% \lstdefinelanguage{Julia}%
+%   {morekeywords={abstract,break,case,catch,const,continue,do,else,elseif,%
+%       end,export,false,for,function,immutable,import,importall,if,in,%
+%       macro,module,otherwise,quote,return,switch,true,try,type,typealias,%
+%       using,while,@test},%
+%    sensitive=true,%
+%    alsoother={$},%
+%    morecomment=[l]\#,%
+%    morecomment=[n]{\#=}{=\#},%
+%    morestring=[s]{"}{"},%
+%    morestring=[m]{'}{'},%
+% }[keywords,comments,strings]%
 
-%% matlab code
+% \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% \lstset{%
+%     language         = Julia,
+%     basicstyle       = \ttfamily,
+%     keywordstyle     = \bfseries\color{blue},
+%     stringstyle      = \color{magenta},
+%     commentstyle     = \color{ForestGreen},
+%     showstringspaces = false,
+%     backgroundcolor = \color{backcolour},
+%     inputencoding = utf8,
+%     extendedchars = true,
+%     breaklines      =   true,
+%     literate=%
+%                 {≈}{{$\approx$}}1
+%                 {π}{{$\pi$}}1
+%                 {∇}{{$\nabla$}}1
+% }
+
+%% matlab language
 \lstset{language=Matlab,%
     %basicstyle=\color{red},
     backgroundcolor = \color{backcolour},
@@ -117,16 +151,21 @@
 }
 
 
-\maketitle
+\begin{document}
 
-\pagebreak
 
-\input{Problems/Problem1}
-\input{Problems/Problem2}
-\input{Problems/Problem3}
-\input{Problems/Problem4}
-\input{Problems/Problem5}
-\input{Problems/Problem6}
-% \includepdf{misc/matlab_p1.pdf}
-% \input{misc/reference.tex}
+
+    \maketitle
+    \pagebreak
+    % \tableofcontents
+    % \pagebreak
+    \input{Problems/Problem1}
+    \input{Problems/Problem2}
+    \input{Problems/Problem3}
+    \input{Problems/Problem4}
+    \input{Problems/Problem5}
+    \input{Problems/Problem6}
+    % \includepdf{misc/matlab_p1.pdf}
+    % \input{misc/reference.tex}
+
 \end{document}
